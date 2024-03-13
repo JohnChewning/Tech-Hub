@@ -27,7 +27,7 @@ router.get('/', withAuth, async (req, res) => {
         })
             .then(dbPostData => {
                 const posts = dbPostData.map(post => post.get({ plain: true }));
-                res.render('/dashboard', {
+                res.render('dashboard', {
                     posts,
                     loggedIn: true
                 });
@@ -85,7 +85,7 @@ router.get('/edit/:id', withAuth, (req, res) => {
 
 router.get('/new', (req, res) => {
     console.log('Reached new post route'); // Add this log statement
-    res.render('add-post', {
+    res.render('create-post', {
         loggedIn: true
     });
 });

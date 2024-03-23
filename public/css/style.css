@@ -44,6 +44,10 @@
     outline: none;
     border: 1px solid #3486eb;
   }
+
+  h2, h3, h4, h5 {
+    font-size: 20px;
+  }
   
   textarea {
     min-width: 40%;

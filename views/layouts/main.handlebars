@@ -10,17 +10,17 @@
 
   <div class="wrapper">
     <header>
-        <h1 class="has-text-black px-3 py-3 has-text-weight-bold">Tech Hub</h1>
-        <nav class="navbar mt-2">
+        <h1>
+        <a href="/">Tech Hub</a>
+        </h1>
+        <nav>
             {{#if loggedIn}}
-            <a href="/" class="navbar-item is-hoverable pt-1">homepage</a>
-            <a href="/dashboard/" class="navbar-item is-hoverable pt-1">dashboard</a>
-            <a href="/dashboard/new" class="navbar-item is-hoverable pt-1 mr-4">create post</a>
-            <button id="logout" class="button is-danger">logout</button>
+            <a href="/dashboard/">Dashboard</a> |
+            <a href="/dashboard/new">Create Post</a>
+            <button id="logout">Logout</button>
             {{else}}
-            <a href="/" class="navbar-item is-hoverable pt-1">homepage</a>
-            <a href="/login" class="button is-primary">login</a>
-            <a href="/signup" class="button is-primary">sign up</a>
+            <a href="/login">Login</a> |
+            <a href="/signup">Sign Up</a>
             {{/if}}
         </nav>
     </header>
@@ -30,14 +30,14 @@
     </main>
 
     <footer class="footer rows pb-2">
-        <div class="row-is-full content has-text-centered">
+        <div>
             <p>
-            <a href="/">homepage</a>{{#if loggedIn}} | 
-            <a href="/dashboard/">dashboard</a> | 
-            <a href="/dashboard/new/">create new post</a>
+            {{#if loggedIn}}  
+            <a href="/dashboard/">Dashboard</a> | 
+            <a href="/dashboard/new/">Create New Post</a>
             {{else}}
-             | <a href="/login/">login</a>
-             <a href="/signup/">sign up</a>
+             <a href="/login/">Login</a> |
+             <a href="/signup/">Sign Up</a>
 
             {{/if}}
             </p>
